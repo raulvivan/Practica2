@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class='formulario'>
+		<form>
+			<label>Fecha de emision: </label>
+			<input type='date' name='fecha_emision' readonly>
+			<label>Fecha limite:</label>
+			<input type='radio' name='fecha_limite' value=90>90
+			<input type='radio' name='fecha_limite' value=120>120
+			<input type='radio' name='fecha_limite' value=180>180
+			<div class='detalles'>
+				<label>Concepto: </label><input type='text' name='concepto'>
+				<label>Precio por unidad: </label><input type='number' name='precio_unidad'>
+				<label>Unidades: </label><input type='number' name='unidades'>
+				<label>Precio total: </label><input type='number' name='precio_total' readonly>
+			</div>
+		</form>
+
+		<label>Subtotal:</label><input type='number' name='subtotal'>
+		<label>IVA: </label><input type='number' name='iva'>
+		<label>TOTAL: </label><input type='number' name='total'>
+		<button id='calcular'>Calcular</button>
+	</div>
+
+</body>
+</html>
