@@ -9,23 +9,45 @@
 
 	<div class='formulario'>
 		<form>
-			<label>Fecha de emision: </label>
-			<input type='date' name='fecha_emision' readonly>
-			<label>Fecha limite:</label>
-			<input type='radio' name='fecha_limite' value=90>90
-			<input type='radio' name='fecha_limite' value=120>120
-			<input type='radio' name='fecha_limite' value=180>180
-			<div class='detalles'>
-				<label>Concepto: </label><input type='text' name='concepto'>
-				<label>Precio por unidad: </label><input type='number' name='precio_unidad'>
-				<label>Unidades: </label><input type='number' name='unidades'>
-				<label>Precio total: </label><input type='number' name='precio_total' readonly>
-			</div>
-		</form>
 
-		<label>Subtotal:</label><input type='number' name='subtotal'>
-		<label>IVA: </label><input type='number' name='iva'>
-		<label>TOTAL: </label><input type='number' name='total'>
+
+			<h3>Fecha de emision: </h3>
+			<input type='date' name='fecha_emision' readonly>
+			<h3>Fecha limite:</h3>
+			<input type='radio' name='fecha_limite' value=90><label>90</label>
+			<input type='radio' name='fecha_limite' value=120><label>120</label>
+			<input type='radio' name='fecha_limite' value=180><label>180</label>
+			<table border=1>
+				<thead>
+					<tr>
+						<th>Concepto</th>
+						<th>Precio/unidad</th>
+						<th>Unidades</th>
+						<th>Precio total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type='text' name='concepto'></td>
+						<td><input type='number' name='precio_unidad'></td>
+						<td><input type='number' name='unidades'></td>
+						<td><input type='number' name='precio_total' readonly></td>
+					</tr>
+					<tr>
+						<td>Subtotal:</td>
+						<td><input type='number' name='subtotal'></td>
+					</tr>
+					<tr>
+						<td>IVA: </td>
+						<td><input type='number' name='iva'></td>
+					</tr>
+					<tr>
+						<td>TOTAL: </td>
+						<td><input type='number' name='total'></td>
+					</tr>
+				</tbody>
+			</table>	
+		</form>
 		<button id='calcular'>Calcular</button>
 	</div>
 
